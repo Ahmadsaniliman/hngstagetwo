@@ -19,7 +19,10 @@ class CountryDetailsPage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         leading: IconButton(
-          icon: const Icon(Icons.arrow_back),
+          icon: Icon(
+            Icons.arrow_back,
+            color: isDarkMode ? Colors.white70 : Colors.black87,
+          ),
           onPressed: () => Navigator.of(context).pushAndRemoveUntil(
             MaterialPageRoute(
                 builder: (_) => CountryListingPage(
@@ -29,7 +32,12 @@ class CountryDetailsPage extends StatelessWidget {
             (route) => false,
           ),
         ),
-        title: Text(country.data!.name!),
+        title: Text(
+          country.data!.name!,
+          style: TextStyle(
+            color: isDarkMode ? Colors.white70 : Colors.black87,
+          ),
+        ),
         centerTitle: true,
         elevation: 0,
         backgroundColor: Colors.transparent,
@@ -94,9 +102,9 @@ class CountryDetailsPage extends StatelessWidget {
             width: 140,
             child: Text(
               label,
-              style: const TextStyle(
+              style: TextStyle(
                 fontWeight: FontWeight.w500,
-                color: Colors.black87,
+                color: isDarkMode ? Colors.white70 : Colors.black87,
                 fontSize: 18,
               ),
             ),
@@ -104,8 +112,8 @@ class CountryDetailsPage extends StatelessWidget {
           Expanded(
             child: Text(
               value,
-              style: const TextStyle(
-                color: Colors.black54,
+              style: TextStyle(
+                color: isDarkMode ? Colors.white70 : Colors.black87,
                 fontWeight: FontWeight.bold,
               ),
             ),

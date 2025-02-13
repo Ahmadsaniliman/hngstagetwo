@@ -180,10 +180,3 @@ class _CountryListingPageState extends State<CountryListingPage> {
   }
 }
 
-//  Navigator.of(context).pushNamed(
-//                                 '/country-details',
-//                                 arguments: {
-//                                   'countryName': country.data!.name,
-//                                   'countryData': country.toJson(),
-//                                 },
-//                               );
